@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM1</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">MON</div>
+        <div class="day">TUE</div>
+        <div class="day">WED</div>
+        <div class="day">THI</div>
+    </div>   
+    <script>
+       const p =  document.querySelector('.parent')
+       console.log(p)
+       console.log(p.children)
+    //    const q = Array.from(p.children)
+    //    console.log(q)
+    console.log(p.children[0])
+
+    for(let i=0;i<p.children.length; i++){
+        console.log(p.children[i].innerHTML)
+    }
+  console.log(p.firstElementChild.nextElementSibling)
+//   console.log(p.firstElementChild.nextSibling)
+  console.log(p.lastElementChild.parentElement.childNodes[0])
+    </script>
+</body>
+</html>
