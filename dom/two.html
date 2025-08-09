@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+<body>
+    <div>
+        <h1 id="h" class="a">Todo</h1>
+    </div>
+    <ul class="todo">
+        <li>Eat</li>
+        <li>Code</li>
+        <li>Sleep</li>
+    </ul>
+    <script>
+        console.log(document.getElementById('h').innerHTML)
+        console.log(document.getElementsByClassName('a').innerText)
+        console.log(document.querySelector('div h1').getAttribute('id'))
+        console.log(document.querySelector('div h1').setAttribute('class','a  b'))
+        console.log(document.querySelectorAll('li'))
+        console.log(document.querySelectorAll('div'))
+        console.log(document.querySelectorAll('ul li'))
+        // console.log(document.querySelector())
+
+       function addEle(lName){
+        const newEle = document.createElement('li')
+        newEle.appendChild(document.createTextNode(lName))
+        document.querySelector('.todo').appendChild(newEle)
+       }
+
+       addEle('python')
+
+
+       
+        const nEle = document.createElement('li')
+        nEle.appendChild(document.createTextNode('ruby'))
+        const secondLanguage = document.querySelector('li:nth-child(2)')
+       secondLanguage.replaceWith(nEle)
+       
+
+    </script>
+</body>
+</html>
